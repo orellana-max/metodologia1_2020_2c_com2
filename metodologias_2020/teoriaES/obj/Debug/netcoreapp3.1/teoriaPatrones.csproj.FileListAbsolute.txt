@@ -1,0 +1,13 @@
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\Trabajos Practicos\metodologias_2020\teoriaES\bin\Debug\netcoreapp3.1\teoriaPatrones.exe
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\Trabajos Practicos\metodologias_2020\teoriaES\bin\Debug\netcoreapp3.1\teoriaPatrones.deps.json
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\Trabajos Practicos\metodologias_2020\teoriaES\bin\Debug\netcoreapp3.1\teoriaPatrones.runtimeconfig.json
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\Trabajos Practicos\metodologias_2020\teoriaES\bin\Debug\netcoreapp3.1\teoriaPatrones.runtimeconfig.dev.json
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\Trabajos Practicos\metodologias_2020\teoriaES\bin\Debug\netcoreapp3.1\teoriaPatrones.dll
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\Trabajos Practicos\metodologias_2020\teoriaES\bin\Debug\netcoreapp3.1\teoriaPatrones.pdb
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\Trabajos Practicos\metodologias_2020\teoriaES\obj\Debug\netcoreapp3.1\teoriaPatrones.csprojAssemblyReference.cache
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\Trabajos Practicos\metodologias_2020\teoriaES\obj\Debug\netcoreapp3.1\teoriaPatrones.AssemblyInfoInputs.cache
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\Trabajos Practicos\metodologias_2020\teoriaES\obj\Debug\netcoreapp3.1\teoriaPatrones.AssemblyInfo.cs
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\Trabajos Practicos\metodologias_2020\teoriaES\obj\Debug\netcoreapp3.1\teoriaPatrones.csproj.CoreCompileInputs.cache
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\Trabajos Practicos\metodologias_2020\teoriaES\obj\Debug\netcoreapp3.1\teoriaPatrones.dll
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\Trabajos Practicos\metodologias_2020\teoriaES\obj\Debug\netcoreapp3.1\teoriaPatrones.pdb
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\Trabajos Practicos\metodologias_2020\teoriaES\obj\Debug\netcoreapp3.1\teoriaPatrones.genruntimeconfig.cache
