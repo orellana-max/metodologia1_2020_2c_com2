@@ -4,7 +4,7 @@ using System.Text;
 
 namespace tp1
 {
-    interface Comparable
+    public interface Comparable
     {
         bool sosIgual(Comparable comparable);
         bool sosMenor(Comparable comparable);

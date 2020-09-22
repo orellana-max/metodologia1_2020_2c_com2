@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using tp1.Iterator;
 
 namespace tp1
 {
-	class Cola : Coleccionable
+	class Cola : Coleccionable, Iterable
 	{
-		public void listar()
+        List<Comparable> elementos = new List<Comparable>();
+        public void listar()
 		{
 			foreach (var elem in elementos)
 			{
@@ -15,12 +17,11 @@ namespace tp1
 			Console.WriteLine();
 		}
 
-		List<Comparable> elementos = new List<Comparable>();
-		public void agregar(Comparable comparable)
+        #region Coleccionable
+        public void agregar(Comparable comparable)
 		{
 			this.elementos.Add(comparable);
 		}
-
         public bool contiene(Comparable comparable)
         {
             foreach (Comparable ele in elementos)
@@ -32,12 +33,10 @@ namespace tp1
             }
             return false;
         }
-
         public int cuantos()
         {
             return this.elementos.Count;
         }
-
         public Comparable maximo()
         {
             Comparable max = null;
@@ -53,7 +52,6 @@ namespace tp1
             }
             return max;
         }
-
         public Comparable minimo()
         {
             Comparable min = null;
@@ -71,6 +69,7 @@ namespace tp1
             }
             return min;
         }
+        #endregion
         public Comparable desencolar()
 		{
 			Comparable dato = this.elementos[0];
@@ -85,5 +84,10 @@ namespace tp1
 		{
 			return this.elementos[0];
 		}
-	}
+
+        public Iterador crearIterador()
+        {
+            return new IteradorDePila(this.elementos);
+        }
+    }
 }

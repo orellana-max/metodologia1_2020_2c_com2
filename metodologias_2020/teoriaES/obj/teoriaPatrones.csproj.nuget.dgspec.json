@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\maxi\\Dropbox\\04 METODOLOGIA DE LA PROGRAMACION\\Trabajos Practicos\\metodologias_2020\\teoriaES\\teoriaPatrones.csproj": {}
+    "C:\\Users\\maxi\\Dropbox\\04 METODOLOGIA DE LA PROGRAMACION\\metodologia1_2020_2c_com2\\metodologias_2020\\teoriaES\\teoriaPatrones.csproj": {}
   },
   "projects": {
-    "C:\\Users\\maxi\\Dropbox\\04 METODOLOGIA DE LA PROGRAMACION\\Trabajos Practicos\\metodologias_2020\\teoriaES\\teoriaPatrones.csproj": {
+    "C:\\Users\\maxi\\Dropbox\\04 METODOLOGIA DE LA PROGRAMACION\\metodologia1_2020_2c_com2\\metodologias_2020\\teoriaES\\teoriaPatrones.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maxi\\Dropbox\\04 METODOLOGIA DE LA PROGRAMACION\\Trabajos Practicos\\metodologias_2020\\teoriaES\\teoriaPatrones.csproj",
+        "projectUniqueName": "C:\\Users\\maxi\\Dropbox\\04 METODOLOGIA DE LA PROGRAMACION\\metodologia1_2020_2c_com2\\metodologias_2020\\teoriaES\\teoriaPatrones.csproj",
         "projectName": "teoriaPatrones",
-        "projectPath": "C:\\Users\\maxi\\Dropbox\\04 METODOLOGIA DE LA PROGRAMACION\\Trabajos Practicos\\metodologias_2020\\teoriaES\\teoriaPatrones.csproj",
+        "projectPath": "C:\\Users\\maxi\\Dropbox\\04 METODOLOGIA DE LA PROGRAMACION\\metodologia1_2020_2c_com2\\metodologias_2020\\teoriaES\\teoriaPatrones.csproj",
         "packagesPath": "C:\\Users\\maxi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maxi\\Dropbox\\04 METODOLOGIA DE LA PROGRAMACION\\Trabajos Practicos\\metodologias_2020\\teoriaES\\obj\\",
+        "outputPath": "C:\\Users\\maxi\\Dropbox\\04 METODOLOGIA DE LA PROGRAMACION\\metodologia1_2020_2c_com2\\metodologias_2020\\teoriaES\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\maxi\\AppData\\Roaming\\NuGet\\NuGet.Config",

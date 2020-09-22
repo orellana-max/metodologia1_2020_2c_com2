@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\maxi\\Dropbox\\04 METODOLOGIA DE LA PROGRAMACION\\Trabajos Practicos\\metodologias_2020\\tp1\\tp1.csproj",
+      "projectUniqueName": "C:\\Users\\maxi\\Dropbox\\04 METODOLOGIA DE LA PROGRAMACION\\metodologia1_2020_2c_com2\\metodologias_2020\\tp1\\tp1.csproj",
       "projectName": "tp1",
-      "projectPath": "C:\\Users\\maxi\\Dropbox\\04 METODOLOGIA DE LA PROGRAMACION\\Trabajos Practicos\\metodologias_2020\\tp1\\tp1.csproj",
+      "projectPath": "C:\\Users\\maxi\\Dropbox\\04 METODOLOGIA DE LA PROGRAMACION\\metodologia1_2020_2c_com2\\metodologias_2020\\tp1\\tp1.csproj",
       "packagesPath": "C:\\Users\\maxi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\maxi\\Dropbox\\04 METODOLOGIA DE LA PROGRAMACION\\Trabajos Practicos\\metodologias_2020\\tp1\\obj\\",
+      "outputPath": "C:\\Users\\maxi\\Dropbox\\04 METODOLOGIA DE LA PROGRAMACION\\metodologia1_2020_2c_com2\\metodologias_2020\\tp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\maxi\\AppData\\Roaming\\NuGet\\NuGet.Config",

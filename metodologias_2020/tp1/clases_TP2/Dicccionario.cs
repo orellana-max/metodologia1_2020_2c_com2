@@ -3,10 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
+using tp1.Iterator;
 
 namespace tp1.clases_TP2
 {
-    class Diccionario : Coleccionable
+    class Diccionario : Coleccionable, Iterable
     {
         List<ClaveValor> elementos = new List<ClaveValor>();
 
@@ -73,13 +74,26 @@ namespace tp1.clases_TP2
         }
         public void agregar(Comparable comparable)
         {
-            foreach (ClaveValor ele in elementos)
+            Random ran = new Random();
+            bool existe = true;
+            Numero num = new Numero(ran.Next(0, 500));
+            while (existe)
             {
-                if (ele.sosIgual((ClaveValor)comparable))
+                existe = false;
+                num = new Numero(ran.Next(0, 500));
+
+                foreach (ClaveValor ele in elementos)
                 {
-                    ele.setValor(((ClaveValor)comparable).getValor());
+                    if (ele.getClave().sosIgual(num)) // si las claves son iguales
+                    {
+                        existe = true;
+                        break;
+                    }
                 }
             }
+            
+            ClaveValor claveValor = new ClaveValor(num, comparable);
+            elementos.Add(claveValor);
         }
         public bool contiene(Comparable comparable)
         {
@@ -91,6 +105,11 @@ namespace tp1.clases_TP2
                 }
             }
             return false;
+        }
+
+        public Iterador crearIterador()
+        {
+            return new IteradorDeDiccionario(this.elementos);
         }
     }
 }

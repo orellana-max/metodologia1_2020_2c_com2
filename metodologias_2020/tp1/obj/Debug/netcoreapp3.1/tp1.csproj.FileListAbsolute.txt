@@ -11,3 +11,16 @@ C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\Trabajos Practicos\metod
 C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\Trabajos Practicos\metodologias_2020\tp1\obj\Debug\netcoreapp3.1\tp1.dll
 C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\Trabajos Practicos\metodologias_2020\tp1\obj\Debug\netcoreapp3.1\tp1.pdb
 C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\Trabajos Practicos\metodologias_2020\tp1\obj\Debug\netcoreapp3.1\tp1.genruntimeconfig.cache
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\metodologia1_2020_2c_com2\metodologias_2020\tp1\obj\Debug\netcoreapp3.1\tp1.csprojAssemblyReference.cache
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\metodologia1_2020_2c_com2\metodologias_2020\tp1\obj\Debug\netcoreapp3.1\tp1.AssemblyInfoInputs.cache
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\metodologia1_2020_2c_com2\metodologias_2020\tp1\obj\Debug\netcoreapp3.1\tp1.AssemblyInfo.cs
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\metodologia1_2020_2c_com2\metodologias_2020\tp1\obj\Debug\netcoreapp3.1\tp1.csproj.CoreCompileInputs.cache
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\metodologia1_2020_2c_com2\metodologias_2020\tp1\obj\Debug\netcoreapp3.1\tp1.dll
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\metodologia1_2020_2c_com2\metodologias_2020\tp1\obj\Debug\netcoreapp3.1\tp1.pdb
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\metodologia1_2020_2c_com2\metodologias_2020\tp1\bin\Debug\netcoreapp3.1\tp1.exe
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\metodologia1_2020_2c_com2\metodologias_2020\tp1\bin\Debug\netcoreapp3.1\tp1.deps.json
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\metodologia1_2020_2c_com2\metodologias_2020\tp1\bin\Debug\netcoreapp3.1\tp1.runtimeconfig.json
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\metodologia1_2020_2c_com2\metodologias_2020\tp1\bin\Debug\netcoreapp3.1\tp1.runtimeconfig.dev.json
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\metodologia1_2020_2c_com2\metodologias_2020\tp1\bin\Debug\netcoreapp3.1\tp1.dll
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\metodologia1_2020_2c_com2\metodologias_2020\tp1\bin\Debug\netcoreapp3.1\tp1.pdb
+C:\Users\maxi\Dropbox\04 METODOLOGIA DE LA PROGRAMACION\metodologia1_2020_2c_com2\metodologias_2020\tp1\obj\Debug\netcoreapp3.1\tp1.genruntimeconfig.cache

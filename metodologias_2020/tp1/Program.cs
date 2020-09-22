@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using tp1.ejerciciosTP1;
+using tp1.clases_TP2;
 
 namespace tp1
 {
@@ -12,7 +13,10 @@ namespace tp1
                 "1 - Ejercicio 7. \n" +
                 "2 - Ejercicio 9. \n" +
                 "3 - Ejercicio 13. \n" +
-                "4 - Ejercicio 17."
+                "4 - Ejercicio 17. \n" +
+                "\n" +
+                "5 - TP2 - Ejercicio 8. \n" +
+                "6 - TP2 - Ejercicio 10 \n"
                 );
             string op = Console.ReadLine();
             switch (op)
@@ -29,6 +33,12 @@ namespace tp1
                 case "4":
                     menu17.run();
                     break;
+                case "5":
+                    menu08.run();
+                    break;
+                case "6":
+                    menu10.run();
+                    break;
                 default:
                     break;
             }
@@ -39,7 +49,14 @@ namespace tp1
         {
             List<string> nombres = new List<string>() { "Maximiliano", "Aaron", "Valeria", "Martina", "Daniel", 
                 "Claudia", "Marcela", "Julio", "Leon", "Laureano", "Blanca", "Sandra", "Walter", "Exequiel",
-                "Fabiana", "Ivan", "Benjamin", "Tristan", "Matias", "Gisela", "Estela", "Susana"};
+                "Fabiana", "Ivan", "Benjamin", "Tristan","Nestor", "Cristina", "Alberto", "Juan", "Jose", "Daya", "Daiana",
+                "Belen", "Evelyn", "Karina", "Natalia", "Gabriel", "Daniela", "Javier", "Cristian", "Nuny", "Veronica",
+                "Miguel", "Lorena", "Milagros", "Roberto", "Franco", "Isabela", "Maria", "Gladiz", "Miriam",
+                "Ivana", "Vanina", "Tini","Matias", "Gisela", "Estela", "Susana","Abel", "Norma", "Mariela", "Alan",
+                "Tito", "Campi", "Noelia","Melina","Mabel","julino","Agustina","Cintia","Tamara", "Papu","Martin",
+                "Hugo","Roman","Rodrigo","Leonardo","Gabriela","Ernesto","Elba","Capi","Rulo","Mia","Chino","Bichito",
+                "Nina","Antonio","Renzo","Loly","Barry","Laurel","Joel","Federico","Silvio","Mario","Claudio",
+                "Josue","Tadeo","Mateo","Judas","Antifaz","Mateo", "Angel","Ricardo","Diego","Angela","Karim"};
 
             return nombres[new Random().Next(nombres.Count)];
         }

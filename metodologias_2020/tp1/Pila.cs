@@ -8,6 +8,11 @@ namespace tp1
     class Pila : Coleccionable, Iterable
     {
         List<Comparable> elementos = new List<Comparable>();
+
+        public Iterador crearIterador()
+        {
+            return new IteradorDePila(this.elementos);
+        }
         public void listar()
         {
             foreach (var elem in elementos)
@@ -16,7 +21,6 @@ namespace tp1
             }
             Console.WriteLine();
         }
-
         public void agregar(Comparable comparable)
         {
             this.elementos.Add(comparable);
@@ -82,11 +86,6 @@ namespace tp1
         public Comparable Tope()
         {
             return this.elementos[elementos.Count - 1];
-        }
-
-        public Iterador crearIterador()
-        {
-            return Iterador;
         }
     }
 }

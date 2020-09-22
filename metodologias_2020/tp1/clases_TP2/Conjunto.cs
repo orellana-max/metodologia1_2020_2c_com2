@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using tp1.Iterator;
 
 namespace tp1.clases_TP2
 {
-    class Conjunto : Coleccionable
+    class Conjunto : Coleccionable, Iterable
     {
         List<Comparable> elementos = new List<Comparable>();
 
@@ -67,6 +68,11 @@ namespace tp1.clases_TP2
                 }
             }
             return false;
+        }
+
+        public Iterador crearIterador()
+        {
+            return new IteradorDeConjunto(this.elementos);
         }
     }
 }

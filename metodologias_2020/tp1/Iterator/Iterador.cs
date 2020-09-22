@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using tp1;
 
 namespace tp1.Iterator
 {
@@ -9,6 +10,6 @@ namespace tp1.Iterator
         void primero();
         void siguiente();
         bool fin();
-        Iterable actual();
+        Comparable actual();
     }
 }

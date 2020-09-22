@@ -43,5 +43,10 @@ namespace tp1.clases_TP2
         {
             throw new NotImplementedException();
         }
+
+        public override string ToString()
+        {
+            return String.Format(this.getValor().ToString() + " Clave:" + this.getClave().ToString());
+        }
     }
 }
