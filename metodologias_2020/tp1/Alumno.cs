@@ -44,5 +44,9 @@ namespace tp1
         {
             return _StrategyCompararAlumnos.sosMayor(this, (Alumno)comparable);
         }
+        public override string ToString()
+        {
+            return String.Format(this.nombre + ". DNI: " + this.getDNI().ToString() +". L: "+ this.getLegajo().ToString()+". P: "+this.getPromedio().ToString());
+        }
     }
 }

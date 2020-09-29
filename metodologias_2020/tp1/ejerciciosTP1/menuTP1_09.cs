@@ -4,24 +4,26 @@ using System.Text;
 
 namespace tp1.ejerciciosTP1
 {
-    class menu07
+    class menuTP1_09
     {
 
         public static void run()
         {
-            Console.WriteLine("Ejercicio 7: ");
+            Console.WriteLine("Ejercicio 9: ");
 
             Pila pila = new Pila();
             Cola cola = new Cola();
+            ColeccionMultiple multiple = new ColeccionMultiple(pila, cola);
 
             llenar(pila);
             llenar(cola);
 
-            pila.listar();
-            cola.listar();
+            //pila.listar();
+            //cola.listar();
 
             informar(pila);
             informar(cola);
+            informar(multiple);
         }
         static void llenar(Coleccionable coleccion)
         {

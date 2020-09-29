@@ -6,7 +6,7 @@ using tp1.Strategy;
 
 namespace tp1.clases_TP2
 {
-    class menu08
+    class menuTP2_08
     {
         public static void run()
         {

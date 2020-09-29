@@ -6,8 +6,8 @@ namespace tp1
 {
     class Persona : Comparable
     {
-        string nombre;
-        int dni;
+        protected string nombre;
+        protected int dni;
 
         public Persona(string n, int d)
         {

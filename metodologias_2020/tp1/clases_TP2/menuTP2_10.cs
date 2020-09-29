@@ -8,7 +8,7 @@ using tp1.clases_TP2;
 
 namespace tp1.ejerciciosTP1
 {
-    class menu10
+    class menuTP2_10
     {
         public static void run()
         {
@@ -38,11 +38,11 @@ namespace tp1.ejerciciosTP1
         static void llenarAlumnos(Coleccionable coleccion)
         {
             Random r = new Random();
-            StrategyCompararAlumnos comparacion = new StrategyComparacionNombre();
+            StrategyCompararAlumnos estrategiaDeComparacion = new StrategyComparacionNombre();
             for (int i = 0; i < 20; i++)
             {
                 Comparable a = new Alumno(Program.randomNombres(), r.Next(0, 100), r.Next(1000, 9999), r.Next(10) / 1.0);
-                ((Alumno)a).setComparacion(comparacion);
+                ((Alumno)a).setComparacion(estrategiaDeComparacion);
                 coleccion.agregar(a);
             }
         }

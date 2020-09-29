@@ -17,7 +17,7 @@ namespace tp1
         {
             foreach (var elem in elementos)
             {
-                Console.Write(elem.ToString() + " - ");
+                Console.Write(elem.ToString() + " \n ");
             }
             Console.WriteLine();
         }

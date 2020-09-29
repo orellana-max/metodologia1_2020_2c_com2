@@ -10,10 +10,10 @@ namespace tp1
         static void Main(string[] args)
         {
             Console.WriteLine("Elija opcion: \n" +
-                "1 - Ejercicio 7. \n" +
-                "2 - Ejercicio 9. \n" +
-                "3 - Ejercicio 13. \n" +
-                "4 - Ejercicio 17. \n" +
+                "1 - TP1 - Ejercicio 7. \n" +
+                "2 - TP1 - Ejercicio 9. \n" +
+                "3 - TP1 - Ejercicio 13. \n" +
+                "4 - TP1 - Ejercicio 17. \n" +
                 "\n" +
                 "5 - TP2 - Ejercicio 8. \n" +
                 "6 - TP2 - Ejercicio 10 \n"
@@ -22,22 +22,22 @@ namespace tp1
             switch (op)
             {
                 case "1":
-                    menu07.run();
+                    menuTP1_07.run();
                     break;
                 case "2":
-                    menu09.run();
+                    menuTP1_09.run();
                     break;
                 case "3":
-                    menu13.run();
+                    menuTP1_13.run();
                     break;
                 case "4":
-                    menu17.run();
+                    menuTP1_17.run();
                     break;
                 case "5":
-                    menu08.run();
+                    menuTP2_08.run();
                     break;
                 case "6":
-                    menu10.run();
+                    menuTP2_10.run();
                     break;
                 default:
                     break;

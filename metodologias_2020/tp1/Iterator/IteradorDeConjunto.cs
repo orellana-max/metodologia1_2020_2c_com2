@@ -22,17 +22,14 @@ namespace tp1.Iterator
         {
            return this.elementos[this.indiceActual];
         }
-
         public bool fin()
         {
-            return this.indiceActual >= this.elementos.Count;
+            return this.indiceActual > this.elementos.Count;
         }
-
         public void primero()
         {
             this.indiceActual = 0;
         }
-
         public void siguiente()
         {
             this.indiceActual++;
