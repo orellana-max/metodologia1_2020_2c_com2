@@ -25,12 +25,12 @@ namespace tp1.ejerciciosTP1
             informar(pila);
         }
 
-        private static void cambiarEstrategia(Iterable iterable, StrategyCompararAlumnos strategyAlumno)
+        private static void cambiarEstrategia(Coleccionable coleccion, StrategyCompararAlumnos estrategia)
         {
-            Iterador iterador = iterable.crearIterador();
+            Iterador iterador = coleccion.crearIterador();
             while (!iterador.fin())
             {
-                ((Alumno)iterador.actual()).setComparacion(strategyAlumno);
+                ((Alumno)iterador.actual()).setComparacion(estrategia);
                 iterador.siguiente();
             }
         }

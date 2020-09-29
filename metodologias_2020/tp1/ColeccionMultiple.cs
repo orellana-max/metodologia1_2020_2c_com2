@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using tp1.Iterator;
 
 namespace tp1
 {
@@ -55,6 +56,11 @@ namespace tp1
                 return true;
             }
             return false;
+        }
+
+        Iterador Iterable.crearIterador()
+        {
+            throw new NotImplementedException();
         }
     }
 }

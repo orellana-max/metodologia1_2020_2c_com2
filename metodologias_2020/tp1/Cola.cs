@@ -5,7 +5,7 @@ using tp1.Iterator;
 
 namespace tp1
 {
-	class Cola : Coleccionable, Iterable
+	class Cola : Coleccionable
 	{
         List<Comparable> elementos = new List<Comparable>();
         public void listar()

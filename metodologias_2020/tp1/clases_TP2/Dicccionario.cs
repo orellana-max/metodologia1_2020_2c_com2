@@ -7,11 +7,11 @@ using tp1.Iterator;
 
 namespace tp1.clases_TP2
 {
-    class Diccionario : Coleccionable, Iterable
+    class Diccionario : Coleccionable
     {
         List<ClaveValor> elementos = new List<ClaveValor>();
 
-        public void agregar(Comparable clave, Object valor)
+        public void agregar(Comparable clave, Comparable valor)
         {
             foreach (ClaveValor v in elementos)
             {
@@ -24,7 +24,7 @@ namespace tp1.clases_TP2
             ClaveValor claveValor = new ClaveValor(clave, valor);
             elementos.Add(claveValor);
         }
-        public Object valorDe(Comparable clave)
+        public Comparable valorDe(Comparable clave)
         {
             foreach (ClaveValor item in elementos)
             {

@@ -33,7 +33,7 @@ namespace tp1.clases_TP2
 
         }
 
-        static void imprimirElementos(Iterable coleccion)
+        static void imprimirElementos(Coleccionable coleccion)
         {
             Iterador iterador = coleccion.crearIterador();
             while (!iterador.fin())
@@ -53,26 +53,5 @@ namespace tp1.clases_TP2
                 coleccion.agregar(a);
             }
         }
-        static void informar(Coleccionable coleccion)
-        {
-            Console.WriteLine("En la coleccion hay {0} elementos", coleccion.cuantos());
-            Console.WriteLine("El elemento minimo de la coleccion es: {0}", coleccion.minimo());
-            Console.WriteLine("El elemento maximo de la coleccion es: {0}", coleccion.maximo());
-
-
-            Console.Write("Ingrese un valor: ");
-            int num = int.Parse(Console.ReadLine());
-            Comparable alm = new Alumno("n", num, 1000, 7.5);
-
-            if (coleccion.contiene(alm))
-            {
-                Console.WriteLine("El alumno con DNI {0} leído está en la colección.", num);
-            }
-            else
-            {
-                Console.WriteLine("EL alumno con DNI {0} leído no está en la colección.", num);
-            }
-        }
-
     }
 }

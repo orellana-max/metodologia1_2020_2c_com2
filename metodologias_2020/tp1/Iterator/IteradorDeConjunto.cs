@@ -24,7 +24,7 @@ namespace tp1.Iterator
         }
         public bool fin()
         {
-            return this.indiceActual > this.elementos.Count;
+            return this.indiceActual >= this.elementos.Count;
         }
         public void primero()
         {

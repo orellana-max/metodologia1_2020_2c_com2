@@ -5,7 +5,7 @@ using tp1.Iterator;
 
 namespace tp1
 {
-    class Pila : Coleccionable, Iterable
+    class Pila : Coleccionable
     {
         List<Comparable> elementos = new List<Comparable>();
 

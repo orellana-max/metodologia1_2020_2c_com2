@@ -5,7 +5,7 @@ using tp1.Iterator;
 
 namespace tp1.clases_TP2
 {
-    class Conjunto : Coleccionable, Iterable
+    class Conjunto : Coleccionable
     {
         List<Comparable> elementos = new List<Comparable>();
 

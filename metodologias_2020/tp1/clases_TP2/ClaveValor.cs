@@ -8,9 +8,9 @@ namespace tp1.clases_TP2
     class ClaveValor: Comparable
     {
         Comparable clave;
-        object valor;
+        Comparable valor;
 
-        public ClaveValor(Comparable c, object valor)
+        public ClaveValor(Comparable c, Comparable valor)
         {
             this.clave = c;
             this.valor = valor;
@@ -20,28 +20,28 @@ namespace tp1.clases_TP2
         {
             return this.clave;
         }
-        public Object getValor()
+        public Comparable getValor()
         {
             return this.valor;
         }
-        public void setValor(Object valor)
+        public void setValor(Comparable valor)
         {
             this.valor = valor;
         }
 
         public bool sosIgual(Comparable comparable)
         {
-            return this.clave.sosIgual(((ClaveValor)comparable).getClave());
+            return this.valor.sosIgual(((ClaveValor)comparable).getValor());
         }
 
         public bool sosMayor(Comparable comparable)
         {
-            return this.clave.sosMayor(((ClaveValor)comparable).getClave());
+            return this.valor.sosMayor(((ClaveValor)comparable).getValor());
         }
 
         public bool sosMenor(Comparable comparable)
         {
-            throw new NotImplementedException();
+            return this.valor.sosMenor(((ClaveValor)comparable).getValor());
         }
 
         public override string ToString()
