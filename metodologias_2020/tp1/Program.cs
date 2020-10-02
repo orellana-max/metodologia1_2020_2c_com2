@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using tp1.ejerciciosTP1;
 using tp1.clases_TP2;
+using tp1.clases_TP3;
 
 namespace tp1
 {
@@ -59,6 +60,15 @@ namespace tp1
                 "Josue","Tadeo","Mateo","Judas","Antifaz","Mateo", "Angel","Ricardo","Diego","Angela","Karim"};
 
             return nombres[new Random().Next(nombres.Count)];
+        }
+
+        public static void llenar(Coleccionable coleccion, int opcion)
+        {
+            for (int i = 0; i < 20; i++)
+            {
+                Comparable comparable = FabricaDeComparables.crearComparable(opcion);
+                coleccion.agregar(comparable);
+            }
         }
     }
 }
