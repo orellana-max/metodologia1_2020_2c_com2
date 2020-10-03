@@ -6,14 +6,15 @@ namespace tp1
 {
     class Persona : Comparable
     {
-        protected string nombre;
-        protected int dni;
+        public virtual string nombre { get; set; }
+        public virtual int dni { get; set; }
 
         public Persona(string n, int d)
         {
             this.nombre = n;
             this.dni = d;
         }
+        public Persona() { }
 
         public string getNombre()
         {

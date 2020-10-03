@@ -14,11 +14,13 @@ namespace tp1.clases_TP3
         {
             Console.WriteLine("ADAPTACION MAIN TP1 Ejercicio 9 y 17"+
                 "\n Elija opcion 1 para llenar con NUMEROS" +
-                "\n Elija opcion 2 para llenar con ALUMNOS");
+                "\n Elija opcion 2 para llenar con ALUMNOS" +
+                "\n Elija opcion 3 para llenar con VENDEDORES");
             string op = Console.ReadLine();
-            if (op == "1") Console.WriteLine("Ejercicio 9: Con NUMEROS");
-            if (op == "2") Console.WriteLine("Ejercicio 17: Con ALUMNOS");
-            
+            if (op == "1") Console.WriteLine("Con NUMEROS");
+            if (op == "2") Console.WriteLine("Con ALUMNOS");
+            if (op == "3") Console.WriteLine("Con VENDEDORES");
+
             Pila pila = new Pila();
             Cola cola = new Cola();
             ColeccionMultiple multiple = new ColeccionMultiple(pila, cola);

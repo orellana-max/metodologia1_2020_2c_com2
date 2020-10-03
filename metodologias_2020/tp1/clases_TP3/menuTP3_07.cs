@@ -22,10 +22,13 @@ namespace tp1.clases_TP3
 
             Console.WriteLine("ADAPTACION MAIN TP1 Ejercicio 9 y 17" +
                 "\n Elija opcion 1 para llenar con NUMEROS" +
-                "\n Elija opcion 2 para llenar con ALUMNOS");
+                "\n Elija opcion 2 para llenar con ALUMNOS" +
+                "\n Elija opcion 3 para llenar con VENDEDORES");
             string op2 = Console.ReadLine();
-            if (op2 == "1") Console.WriteLine("Ejercicio 9: Con NUMEROS");
-            if (op2 == "2") Console.WriteLine("Ejercicio 17: Con ALUMNOS");
+
+            if (op2 == "1") Console.WriteLine("Con NUMEROS");
+            if (op2 == "2") Console.WriteLine("Con ALUMNOS");
+            if (op2 == "3") Console.WriteLine("Con VENDEDORES");
 
             llenar(coleccionable, op2);
             informar(coleccionable, op2);
