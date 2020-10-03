@@ -14,11 +14,11 @@ namespace tp1
                 "1 - TP1 - Ejercicio 7. \n" +
                 "2 - TP1 - Ejercicio 9. \n" +
                 "3 - TP1 - Ejercicio 13. \n" +
-                "4 - TP1 - Ejercicio 17. \n" +
-                "\n" +
+                "4 - TP1 - Ejercicio 17. \n\n" +
                 "5 - TP2 - Ejercicio 8. \n" +
-                "6 - TP2 - Ejercicio 10 \n" +
-                "7 - TP3 - Ejercicio 6 \n"
+                "6 - TP2 - Ejercicio 10 \n\n" +
+                "7 - TP3 - Ejercicio 6 \n" +
+                "8 - TP3 - Ejercicio 7 \n"
                 );
             string op = Console.ReadLine();
             switch (op)
@@ -43,6 +43,9 @@ namespace tp1
                     break;
                 case "7":
                     menuTP3_06.run();
+                    break;
+                case "8":
+                    menuTP3_07.run();
                     break;
                 default:
                     break;

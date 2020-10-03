@@ -5,7 +5,7 @@ using tp1.Iterator;
 
 namespace tp1
 {
-    interface Coleccionable : Iterable
+    public interface Coleccionable : Iterable
     {
         int cuantos();
         Comparable minimo();

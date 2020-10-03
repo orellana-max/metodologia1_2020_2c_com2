@@ -53,7 +53,7 @@ namespace tp1
 
         public override string ToString()
         {
-            return String.Format(this.nombre + " " + this.getDNI().ToString());
+            return String.Format(this.nombre + " DNI: " + this.getDNI().ToString());
         }
     }
 }
