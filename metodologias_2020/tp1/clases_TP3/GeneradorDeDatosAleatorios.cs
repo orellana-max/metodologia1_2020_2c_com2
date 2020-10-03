@@ -6,11 +6,11 @@ namespace tp1.clases_TP3
 {
     class GeneradorDeDatosAleatorios
     {
-        public int numeroAleatorio(int max)
+        public static int numeroAleatorio(int max)
         {
             return new Random().Next(max);
         }
-        public string stringAleatorio(int cant)
+        public static string stringAleatorio(int cant)
         {
             int num;
             string str = "";

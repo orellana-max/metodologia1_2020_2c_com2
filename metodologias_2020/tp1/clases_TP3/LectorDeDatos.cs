@@ -6,7 +6,7 @@ namespace tp1.clases_TP3
 {
     class LectorDeDatos
     {
-        public int numeroPorTeclado()
+        public static int numeroPorTeclado()
         {
             int num;
             string letra;
@@ -23,8 +23,9 @@ namespace tp1.clases_TP3
             } while (!cond);
             return num;
         }
-        public string stringPorTeclado()
+        public static string stringPorTeclado()
         {
+            Console.Write("Ingresar dato: ");
             string str = Console.ReadLine();
             return str;
         }

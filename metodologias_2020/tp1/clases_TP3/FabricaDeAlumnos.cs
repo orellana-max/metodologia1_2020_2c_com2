@@ -6,19 +6,22 @@ namespace tp1.clases_TP3
 {
     class FabricaDeAlumnos : FabricaDeComparables
     {
-        public Comparable CrearAleatorio()
+        public override Comparable CrearAleatorio()
         {
-            GeneradorDeDatosAleatorios dAlea = new GeneradorDeDatosAleatorios();
-            return new Alumno(Program.randomNombres(), dAlea.numeroAleatorio(1000), dAlea.numeroAleatorio(999999), dAlea.numeroAleatorio(100) / 10.0);
+            return new Alumno(
+                Program.randomNombres(),
+                GeneradorDeDatosAleatorios.numeroAleatorio(1000),
+                GeneradorDeDatosAleatorios.numeroAleatorio(999999),
+                GeneradorDeDatosAleatorios.numeroAleatorio(100) / 10.0);
         }
-        public Comparable CrearPorTeclado()
+        public override  Comparable CrearPorTeclado()
         {
-            LectorDeDatos lector = new LectorDeDatos();
-            return new Alumno(lector.stringPorTeclado(), lector.numeroPorTeclado(), lector.numeroPorTeclado(), lector.numeroPorTeclado()/1.0);
-        }
-        public Comparable crearComparable()
-        {
-            return this.CrearAleatorio();
+            Console.WriteLine("ingresar Nombre, DNI, Legajo y promedio");
+            return new Alumno(
+               LectorDeDatos.stringPorTeclado(), 
+               LectorDeDatos.numeroPorTeclado(),
+               LectorDeDatos.numeroPorTeclado(),
+               LectorDeDatos.numeroPorTeclado() / 1.0);; 
         }
     }
 }

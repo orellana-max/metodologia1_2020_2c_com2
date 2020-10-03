@@ -15,10 +15,8 @@ namespace tp1.ejerciciosTP1
             Cola cola = new Cola();
             ColeccionMultiple multiple = new ColeccionMultiple(pila, cola);
 
-            Program.llenar(pila, 2);
-            Program.llenar(cola, 2);
-            //llenarAlumnos(pila);
-            //llenarAlumnos(cola);
+            llenarAlumnos(pila);
+            llenarAlumnos(cola);
 
             pila.listar();
             cola.listar();

@@ -6,19 +6,13 @@ namespace tp1.clases_TP3
 {
     class FabricaDeNumeros : FabricaDeComparables
     {
-        public Comparable CrearAleatorio()
+        public override Comparable CrearAleatorio()
         {
-            return new Numero(new GeneradorDeDatosAleatorios().numeroAleatorio(999999));
+            return new Numero(GeneradorDeDatosAleatorios.numeroAleatorio(999999));
         }
-        public Comparable CrearPorTeclado()
+        public override Comparable CrearPorTeclado()
         {
-            return new Numero(new LectorDeDatos().numeroPorTeclado());
+            return new Numero(LectorDeDatos.numeroPorTeclado());
         }
-        public Comparable crearComparable()
-        {
-            return this.CrearAleatorio();
-        }
-
-
     }
 }

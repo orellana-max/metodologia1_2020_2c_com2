@@ -17,7 +17,8 @@ namespace tp1
                 "4 - TP1 - Ejercicio 17. \n" +
                 "\n" +
                 "5 - TP2 - Ejercicio 8. \n" +
-                "6 - TP2 - Ejercicio 10 \n"
+                "6 - TP2 - Ejercicio 10 \n" +
+                "7 - TP3 - Ejercicio 6 \n"
                 );
             string op = Console.ReadLine();
             switch (op)
@@ -39,6 +40,9 @@ namespace tp1
                     break;
                 case "6":
                     menuTP2_10.run();
+                    break;
+                case "7":
+                    menuTP3_06.run();
                     break;
                 default:
                     break;
@@ -62,13 +66,13 @@ namespace tp1
             return nombres[new Random().Next(nombres.Count)];
         }
 
-        public static void llenar(Coleccionable coleccion, int opcion)
-        {
-            for (int i = 0; i < 20; i++)
-            {
-                Comparable comparable = FabricaDeComparables.crearComparable(opcion);
-                coleccion.agregar(comparable);
-            }
-        }
+        //public static void llenar(Coleccionable coleccion, int opcion)
+        //{
+        //    for (int i = 0; i < 20; i++)
+        //    {
+        //        Comparable comparable = FabricaDeComparables.crearAleatorio(opcion);
+        //        coleccion.agregar(comparable);
+        //    }
+        //}
     }
 }

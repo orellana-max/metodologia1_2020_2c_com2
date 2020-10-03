@@ -4,23 +4,32 @@ using System.Text;
 
 namespace tp1.clases_TP3
 {
-    interface FabricaDeComparables
+    public abstract class FabricaDeComparables
     {
-        Comparable CrearAleatorio();
-        Comparable CrearPorTeclado();
+        public abstract Comparable CrearAleatorio();
+        public abstract Comparable CrearPorTeclado();
 
-        public static Comparable crearComparable(int queComparable)
+        public static Comparable crearAleatorio(string opcion)
         {
             FabricaDeComparables fabrica = null;
 
-            if (queComparable == 1)
+            if (opcion == "1")
                 fabrica = new FabricaDeNumeros();
-            if (queComparable == 2)
+            if (opcion == "2")
                 fabrica = new FabricaDeAlumnos();
 
-            return fabrica.crearComparable();
+            return fabrica.CrearAleatorio();
         }
-        abstract Comparable crearComparable();
+        public static Comparable crearPorTeclado(string opcion)
+        {
+            FabricaDeComparables fabrica = null;
 
+            if (opcion == "1")
+                fabrica = new FabricaDeNumeros();
+            if (opcion == "2")
+                fabrica = new FabricaDeAlumnos();
+
+            return fabrica.CrearPorTeclado();
+        }
     }
 }
