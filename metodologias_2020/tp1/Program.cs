@@ -18,7 +18,8 @@ namespace tp1
                 "5 - TP2 - Ejercicio 8. \n" +
                 "6 - TP2 - Ejercicio 10 \n\n" +
                 "7 - TP3 - Ejercicio 6 \n" +
-                "8 - TP3 - Ejercicio 7 \n"
+                "8 - TP3 - Ejercicio 7 \n" +
+                "9 - TP3 - Ejercicio 14 \n"
                 );
             string op = Console.ReadLine();
             switch (op)
@@ -47,6 +48,9 @@ namespace tp1
                 case "8":
                     menuTP3_07.run();
                     break;
+                case "9":
+                    menuTP3_14.run();
+                    break;
                 default:
                     break;
             }
@@ -55,7 +59,7 @@ namespace tp1
         }
         public static string randomNombres()
         {
-            List<string> nombres = new List<string>() { "Maximiliano", "Aaron", "Valeria", "Martina", "Daniel", 
+            List<string> nombres = new List<string>() { "Maximiliano", "Aaron", "Valeria", "Martina", "Daniel",
                 "Claudia", "Marcela", "Julio", "Leon", "Laureano", "Blanca", "Sandra", "Walter", "Exequiel",
                 "Fabiana", "Ivan", "Benjamin", "Tristan","Nestor", "Cristina", "Alberto", "Juan", "Jose", "Daya", "Daiana",
                 "Belen", "Evelyn", "Karina", "Natalia", "Gabriel", "Daniela", "Javier", "Cristian", "Nuny", "Veronica",

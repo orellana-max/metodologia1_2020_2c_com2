@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using tp1.clases_TP3;
 
 namespace tp1
 {
-    class Vendedor : Persona
+    class Vendedor : Persona, Sujeto
     {
+        List<Observer> observer = new List<Observer>();
         public int sueldoBasico { get; set; }
         public double bonus { get; set; }
+        public int ultimaVenta { get; set; }
         public Vendedor(string nombre, int dni, int sueldo) : base(nombre, dni)
         {
             this.sueldoBasico = sueldo;
@@ -16,7 +19,9 @@ namespace tp1
         public Vendedor(){}
         public void venta(int monto)
         {
+            this.ultimaVenta = monto;
             Console.WriteLine("El vendedor {0} hizo una venta de ${1}.", this, monto);
+            this.notificar();
         }
         public void aumentaBonus()
         {
@@ -56,5 +61,25 @@ namespace tp1
         {
             return base.ToString() + " Bonus: " + this.bonus;
         }
+        #region interfas de observables
+
+        public void agregar(Observer observador)
+        {
+            this.observer.Add(observador);
+        }
+
+        public void Quitar(Observer observador)
+        {
+            this.observer.Remove(observador);
+        }
+
+        public void notificar()
+        {
+            foreach (Observer ob in observer)
+            {
+                ob.actualizar(this);
+            }
+        }
+        #endregion
     }
 }

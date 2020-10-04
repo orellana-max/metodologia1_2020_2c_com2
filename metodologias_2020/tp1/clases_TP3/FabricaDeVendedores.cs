@@ -16,8 +16,6 @@ namespace tp1.clases_TP3
                 bonus = GeneradorDeDatosAleatorios.numeroAleatorio(30) //bonus para probar
             };
         }
-
-
         public override Comparable CrearPorTeclado()
         {
             Console.WriteLine("ingresar por separado Nombre, DNI, Sueldo Basico");

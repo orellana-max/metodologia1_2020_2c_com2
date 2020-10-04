@@ -14,7 +14,7 @@ namespace tp1.clases_TP3
                 GeneradorDeDatosAleatorios.numeroAleatorio(999999),
                 GeneradorDeDatosAleatorios.numeroAleatorio(100) / 10.0);
         }
-        public override  Comparable CrearPorTeclado()
+        public override Comparable CrearPorTeclado()
         {
             Console.WriteLine("ingresar Nombre, DNI, Legajo y promedio");
             return new Alumno(
