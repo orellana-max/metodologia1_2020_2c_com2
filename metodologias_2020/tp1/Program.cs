@@ -19,7 +19,8 @@ namespace tp1
                 "6 - TP2 - Ejercicio 10 \n\n" +
                 "7 - TP3 - Ejercicio 6 \n" +
                 "8 - TP3 - Ejercicio 7 \n" +
-                "9 - TP3 - Ejercicio 14 \n"
+                "9 - TP3 - Ejercicio 14 \n" +
+                "9b - TP3 - Ejercicio opcional vendedor pauperrimo \n"
                 );
             string op = Console.ReadLine();
             switch (op)
@@ -51,6 +52,9 @@ namespace tp1
                 case "9":
                     menuTP3_14.run();
                     break;
+                case "9b":
+                    menuTP3_pauperrimo.run();
+                    break;
                 default:
                     break;
             }
@@ -72,14 +76,5 @@ namespace tp1
 
             return nombres[new Random().Next(nombres.Count)];
         }
-
-        //public static void llenar(Coleccionable coleccion, int opcion)
-        //{
-        //    for (int i = 0; i < 20; i++)
-        //    {
-        //        Comparable comparable = FabricaDeComparables.crearAleatorio(opcion);
-        //        coleccion.agregar(comparable);
-        //    }
-        //}
     }
 }

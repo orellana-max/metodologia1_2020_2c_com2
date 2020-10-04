@@ -8,13 +8,13 @@ namespace tp1.clases_TP3
     {
         public override Comparable CrearAleatorio()
         {
-            return new Vendedor
-            {
-                nombre = Program.randomNombres(), //nombre
-                dni = GeneradorDeDatosAleatorios.numeroAleatorio(1000), //DNI
-                sueldoBasico = GeneradorDeDatosAleatorios.numeroAleatorio(999999), //Sueldo basico
-                bonus = GeneradorDeDatosAleatorios.numeroAleatorio(30) //bonus para probar
-            };
+            Vendedor v = new Vendedor
+                (   Program.randomNombres(), //nombre
+                    GeneradorDeDatosAleatorios.numeroAleatorio(1000), //DNI
+                    GeneradorDeDatosAleatorios.numeroAleatorio(999999) //Sueldo basico    
+                );
+            v.bonus = GeneradorDeDatosAleatorios.numeroAleatorio(30); //bonus para probar
+            return v;
         }
         public override Comparable CrearPorTeclado()
         {

@@ -19,6 +19,8 @@ namespace tp1.clases_TP3
                 fabrica = new FabricaDeAlumnos();
             if (opcion == "3")
                 fabrica = new FabricaDeVendedores();
+            if (opcion == "4")
+                fabrica = new FabricaDeVendedoresPauperrimo();
 
             return fabrica.CrearAleatorio();
         }

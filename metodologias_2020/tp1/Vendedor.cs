@@ -7,17 +7,21 @@ namespace tp1
 {
     class Vendedor : Persona, Sujeto
     {
-        List<Observer> observer = new List<Observer>();
-        public int sueldoBasico { get; set; }
+        protected List<Observer> observer = new List<Observer>();
+        protected int sueldoBasico { get; set; }
         public double bonus { get; set; }
-        public int ultimaVenta { get; set; }
+        protected int ultimaVenta { get; set; }
         public Vendedor(string nombre, int dni, int sueldo) : base(nombre, dni)
         {
             this.sueldoBasico = sueldo;
             this.bonus = 1;
         }
         public Vendedor(){}
-        public void venta(int monto)
+        public int getUltimaVenta()
+        {
+            return this.ultimaVenta;
+        }
+        public virtual void venta(int monto)
         {
             this.ultimaVenta = monto;
             Console.WriteLine("El vendedor {0} hizo una venta de ${1}.", this, monto);
@@ -81,5 +85,6 @@ namespace tp1
             }
         }
         #endregion
+       
     }
 }

@@ -16,7 +16,7 @@ namespace tp1
         public void actualizar(Sujeto sujeto)
         {
             Vendedor vendedor = (Vendedor)sujeto;
-            this.venta(vendedor.ultimaVenta, vendedor);
+            this.venta(vendedor.getUltimaVenta(), vendedor);
         }
 
         public void cerrar()
