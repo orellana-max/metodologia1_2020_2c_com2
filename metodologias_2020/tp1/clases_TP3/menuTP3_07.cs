@@ -32,33 +32,33 @@ namespace tp1.clases_TP3
 
             llenar(coleccionable, op2);
             informar(coleccionable, op2);
+        }
 
-
-            static void llenar(Coleccionable coleccion, string opcion)
+        static void llenar(Coleccionable coleccion, string opcion)
+        {
+            for (int i = 0; i < 20; i++)
             {
-                for (int i = 0; i < 20; i++)
-                {
-                    Comparable comparable = FabricaDeComparables.crearAleatorio(opcion);
-                    coleccion.agregar(comparable);
-                }
+                Comparable comparable = FabricaDeComparables.crearAleatorio(opcion);
+                coleccion.agregar(comparable);
             }
-            static void informar(Coleccionable coleccion, string opcion)
-            {
-                Console.WriteLine("En la coleccion hay {0} elementos", coleccion.cuantos());
-                Console.WriteLine("El elemento minimo de la coleccion es: {0}", coleccion.minimo());
-                Console.WriteLine("El elemento maximo de la coleccion es: {0}", coleccion.maximo());
+        }
+        static void informar(Coleccionable coleccion, string opcion)
+        {
+            Console.WriteLine("En la coleccion hay {0} elementos", coleccion.cuantos());
+            Console.WriteLine("El elemento minimo de la coleccion es: {0}", coleccion.minimo());
+            Console.WriteLine("El elemento maximo de la coleccion es: {0}", coleccion.maximo());
 
-                Comparable comparable = FabricaDeComparables.crearPorTeclado(opcion);
-                Console.WriteLine("¿El elemento creado esta en la coleccion?");
-                if (coleccion.contiene(comparable))
-                {
-                    Console.WriteLine("El elemento leído está en la colección.");
-                }
-                else
-                {
-                    Console.WriteLine("El elemento leído no está en la colección.");
-                }
+            Comparable comparable = FabricaDeComparables.crearPorTeclado(opcion);
+            Console.WriteLine("¿El elemento creado esta en la coleccion?");
+            if (coleccion.contiene(comparable))
+            {
+                Console.WriteLine("El elemento leído está en la colección.");
+            }
+            else
+            {
+                Console.WriteLine("El elemento leído no está en la colección.");
             }
         }
     }
 }
+

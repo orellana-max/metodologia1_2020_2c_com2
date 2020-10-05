@@ -99,7 +99,7 @@ namespace tp1.clases_TP2
         {
             foreach (ClaveValor ele in elementos)
             {
-                if (ele.sosIgual((ClaveValor)comparable))
+                if (ele.getValor().sosIgual(comparable))
                 {
                     return true;
                 }

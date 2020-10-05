@@ -10,56 +10,66 @@ namespace tp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Elija opcion: \n" +
-                "1 - TP1 - Ejercicio 7. \n" +
-                "2 - TP1 - Ejercicio 9. \n" +
-                "3 - TP1 - Ejercicio 13. \n" +
-                "4 - TP1 - Ejercicio 17. \n\n" +
-                "5 - TP2 - Ejercicio 8. \n" +
-                "6 - TP2 - Ejercicio 10 \n\n" +
-                "7 - TP3 - Ejercicio 6 \n" +
-                "8 - TP3 - Ejercicio 7 \n" +
-                "9 - TP3 - Ejercicio 14 \n" +
-                "9b - TP3 - Ejercicio opcional vendedor pauperrimo \n"
-                );
-            string op = Console.ReadLine();
-            switch (op)
-            {
-                case "1":
-                    menuTP1_07.run();
-                    break;
-                case "2":
-                    menuTP1_09.run();
-                    break;
-                case "3":
-                    menuTP1_13.run();
-                    break;
-                case "4":
-                    menuTP1_17.run();
-                    break;
-                case "5":
-                    menuTP2_08.run();
-                    break;
-                case "6":
-                    menuTP2_10.run();
-                    break;
-                case "7":
-                    menuTP3_06.run();
-                    break;
-                case "8":
-                    menuTP3_07.run();
-                    break;
-                case "9":
-                    menuTP3_14.run();
-                    break;
-                case "9b":
-                    menuTP3_pauperrimo.run();
-                    break;
-                default:
-                    break;
-            }
-
-            Console.ReadKey();
+            string op;
+            do {
+                Console.WriteLine("Elija opcion: \n" +
+                    "1 - TP1 - Ejercicio 7. \n" +
+                    "2 - TP1 - Ejercicio 9. \n" +
+                    "3 - TP1 - Ejercicio 13. \n" +
+                    "4 - TP1 - Ejercicio 17. \n\n" +
+                    "5 - TP2 - Ejercicio 8. \n" +
+                    "6 - TP2 - Ejercicio 10 \n\n" +
+                    "7 - TP3 - Ejercicio 6 \n" +
+                    "8 - TP3 - Ejercicio 7 \n" +
+                    "9 - TP3 - Ejercicio 14 \n" +
+                    "9b - TP3 - Ejercicio opcional vendedor pauperrimo \n"+
+                    "Enter para salir"
+                    );
+                op = Console.ReadLine();
+                switch (op)
+                {
+                    case "1":
+                        menuTP1_07.run();
+                        break;
+                    case "2":
+                        menuTP1_09.run();
+                        break;
+                    case "3":
+                        menuTP1_13.run();
+                        break;
+                    case "4":
+                        menuTP1_17.run();
+                        break;
+                    case "5":
+                        menuTP2_08.run();
+                        break;
+                    case "6":
+                        menuTP2_10.run();
+                        break;
+                    case "7":
+                        menuTP3_06.run();
+                        break;
+                    case "8":
+                        menuTP3_07.run();
+                        break;
+                    case "9":
+                        menuTP3_14.run();
+                        break;
+                    case "9b":
+                        menuTP3_pauperrimo.run();
+                        break;
+                    case "":
+                        Console.WriteLine("Esta saliendo.");
+                        break;
+                    default:
+                        Console.WriteLine("No ingreso opcion valida.");
+                        break;
+                }
+                Console.WriteLine("\n \t Presione una tecla para continuar.");
+                Console.ReadKey();
+                Console.Clear();
+            } while (op != "");
+           
         }
         public static string randomNombres()
         {
