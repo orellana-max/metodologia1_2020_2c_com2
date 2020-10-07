@@ -17,10 +17,13 @@ namespace tp1.clases_TP3
                 fabrica = new FabricaDeNumeros();
             if (opcion == "2")
                 fabrica = new FabricaDeAlumnos();
+            if (opcion == "2.1")
+                fabrica = new FabricaDeAlumnosMuyEstudiosos();
             if (opcion == "3")
                 fabrica = new FabricaDeVendedores();
             if (opcion == "4")
                 fabrica = new FabricaDeVendedoresPauperrimo();
+            
 
             return fabrica.CrearAleatorio();
         }
@@ -32,8 +35,12 @@ namespace tp1.clases_TP3
                 fabrica = new FabricaDeNumeros();
             if (opcion == "2")
                 fabrica = new FabricaDeAlumnos();
+            if (opcion == "2.1")
+                fabrica = new FabricaDeAlumnosMuyEstudiosos();
             if (opcion == "3")
                 fabrica = new FabricaDeVendedores();
+            if (opcion == "4")
+                fabrica = new FabricaDeVendedoresPauperrimo();
 
             return fabrica.CrearPorTeclado();
         }

@@ -8,7 +8,7 @@ namespace tp1.clases_TP3
     {
         public static int numeroAleatorio(int max)
         {
-            return new Random().Next(max);
+            return new Random().Next(1,max);
         }
         public static string stringAleatorio(int cant)
         {

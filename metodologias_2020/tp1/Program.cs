@@ -10,6 +10,7 @@ namespace tp1
     {
         static void Main(string[] args)
         {
+            menuTP4_04.run();
             string op;
             do {
                 Console.WriteLine("Elija opcion: \n" +
@@ -22,7 +23,9 @@ namespace tp1
                     "7 - TP3 - Ejercicio 6 \n" +
                     "8 - TP3 - Ejercicio 7 \n" +
                     "9 - TP3 - Ejercicio 14 \n" +
-                    "9b - TP3 - Ejercicio opcional vendedor pauperrimo \n"+
+                    "9b - TP3 - Ejercicio opcional vendedor pauperrimo \n\n"+
+                    "10 - TP4 - Ejercicio 04 \n" +
+                    "11 - TP4 - Ejercicio 08 \n" +
                     "Enter para salir"
                     );
                 op = Console.ReadLine();
@@ -57,6 +60,12 @@ namespace tp1
                         break;
                     case "9b":
                         menuTP3_pauperrimo.run();
+                        break;
+                    case "10":
+                        menuTP4_04.run();
+                        break;
+                    case "11":
+                        menuTP4_08.run();
                         break;
                     case "":
                         Console.WriteLine("Esta saliendo.");

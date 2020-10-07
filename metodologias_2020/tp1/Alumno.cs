@@ -1,36 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using tp1.clases_TP3;
 using tp1.Strategy;
 
 namespace tp1
 {
     class Alumno : Persona
     {
-        private int legajo;
-        private double promedio;
-        private StrategyCompararAlumnos _StrategyCompararAlumnos;
+        protected int legajo;
+        protected double promedio;
+        protected int calificacion;
+        protected StrategyCompararAlumnos _StrategyCompararAlumnos;
 
-        public Alumno (string n, int d, int l, double p): base(n, d)
+        public Alumno(string nombre, int dni, int legajo, double promedio) : base(nombre, dni)
         {
-            this.legajo = l;
-            this.promedio = p;
+            this.legajo = legajo;
+            this.promedio = promedio;
             _StrategyCompararAlumnos = new StrategyComparacionNombre();
         }
 
-        public void setComparacion(StrategyCompararAlumnos comparacion)
+        public virtual int getLegajo()
+        {
+            return this.legajo;
+        }
+        public virtual double getPromedio()
+        {
+            return this.promedio;
+        }
+        public virtual int getCalificacion()
+        {
+            return this.calificacion;
+        }
+        public virtual void setCalificacion(int calificacion)
+        {
+            this.calificacion = calificacion;
+        }
+        public virtual void setComparacion(StrategyCompararAlumnos comparacion)
         {
             this._StrategyCompararAlumnos = comparacion;
         }
 
-        public int getLegajo()
+        public virtual int responderPregunta(int pregunta)
         {
-            return this.legajo;
+            return new Random().Next(1, 3);
         }
-        public double getPromedio()
+        public virtual string mostrarCalificacion()
         {
-            return this.promedio;
+            return this.ToString() +"\t"+ getCalificacion().ToString();
         }
+
 
         public override bool sosIgual(Comparable comparable)
         {
