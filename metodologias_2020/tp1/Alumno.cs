@@ -17,7 +17,7 @@ namespace tp1
         {
             this.legajo = legajo;
             this.promedio = promedio;
-            _StrategyCompararAlumnos = new StrategyComparacionNombre();
+            _StrategyCompararAlumnos = new StrategyComparacionCalificacion (); // StrategyComparacionNombre
         }
 
         public virtual int getLegajo()
@@ -35,6 +35,10 @@ namespace tp1
         public virtual void setCalificacion(int calificacion)
         {
             this.calificacion = calificacion;
+        }
+        public virtual StrategyCompararAlumnos getComparacion()
+        {
+            return this._StrategyCompararAlumnos;
         }
         public virtual void setComparacion(StrategyCompararAlumnos comparacion)
         {

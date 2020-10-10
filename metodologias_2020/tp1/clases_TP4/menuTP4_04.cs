@@ -27,7 +27,6 @@ namespace tp1
             //students.set
             profesor.setStudents(students);
             profesor.teachingAClass();
-
         }
 
     }

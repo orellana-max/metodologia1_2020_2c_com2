@@ -10,15 +10,11 @@ namespace tp1.clases_TP4
     {
         Student student;
         public AdapterStudentToAlumno(Student s):base(s.getName(), 
-            new Random().Next(999999), new Random().Next(9999), (new Random().Next(1,100))/10.0)
+            0, 0, 1.0)
         {
             this.student = s;
         }
         
-        public override int getCalificacion()
-        {
-            return int.Parse(this.student.showResult());
-        }
         public override void setCalificacion(int calificacion)
         {
             this.student.setScore(calificacion);
