@@ -47,7 +47,7 @@ namespace tp1
         }
         public virtual string mostrarCalificacion()
         {
-            return this.ToString() +"\t"+ getCalificacion().ToString();
+            return this.getNombre() + "\t\t" + getCalificacion().ToString();
         }
 
 

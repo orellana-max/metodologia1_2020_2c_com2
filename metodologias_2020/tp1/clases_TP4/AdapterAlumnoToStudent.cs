@@ -17,7 +17,7 @@ namespace tp1.clases_TP4
         public bool equals(Student student)
         {
             return this.alumno.getNombre().CompareTo(student.getName()) == 0;
-            //return this.alumno.sosIgual(student);
+            //return this.alumno.sosIgual(new AdapterStudentToAlumno(student));
         }
 
         public string getName()
@@ -27,13 +27,14 @@ namespace tp1.clases_TP4
 
         public bool greaterThan(Student student)
         {
-            //return this.alumno.sosMayor(student);
             return this.alumno.getNombre().CompareTo(student.getName()) > 0;
+            //return this.alumno.sosMayor(new AdapterStudentToAlumno(student));
         }
 
         public bool lessThan(Student student)
         {
             return this.alumno.getNombre().CompareTo(student.getName()) < 0;
+            //return this.alumno.sosMenor(new AdapterStudentToAlumno(student));
         }
 
         public void setScore(int score)
@@ -44,6 +45,7 @@ namespace tp1.clases_TP4
         public string showResult()
         {
             return this.alumno.mostrarCalificacion();
+            //return this.alumno.getCalificacion().ToString();
         }
 
         public int yourAnswerIs(int question)

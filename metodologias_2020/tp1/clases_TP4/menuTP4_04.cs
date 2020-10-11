@@ -4,6 +4,7 @@ using System.Text;
 using MetodologíasDeProgramaciónI;
 using tp1.clases_TP3;
 using tp1.clases_TP4;
+using tp1.Strategy;
 
 namespace tp1
 {
@@ -21,6 +22,7 @@ namespace tp1
                 estudiante = new AdapterAlumnoToStudent(alumno);
                 students.addStudent(estudiante);
                 alumno = (Alumno)FabricaDeComparables.crearAleatorio("2.1");
+                alumno.setComparacion(new StrategyComparacionCalificacion());
                 estudiante = new AdapterAlumnoToStudent(alumno);
                 students.addStudent(estudiante);
             }
