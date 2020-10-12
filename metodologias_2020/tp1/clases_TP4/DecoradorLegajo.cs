@@ -14,12 +14,6 @@ namespace tp1.clases_TP4
         {
             int idx = elementoDecorado.mostrarUltimaCalificacion().IndexOf(this.getNombre()) + this.getNombre().Length;
             return elementoDecorado.mostrarUltimaCalificacion().Insert(idx, " (" + this.getLegajo().ToString() +")");
-            //return elementoDecorado.mostrarUltimaCalificacion().Insert(++idx, a.getLegajo().ToString())
-
-            //Alumno a = (Alumno)this.elementoDecorado;
-            //string nombre = a.getNombre();
-            //int idx = a.mostrarUltimaCalificacion().IndexOf(nombre) + nombre.Length;
-            //return a.mostrarUltimaCalificacion().Insert(++idx, a.getLegajo().ToString());
         }
     }
 }

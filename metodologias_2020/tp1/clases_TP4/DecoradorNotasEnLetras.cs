@@ -12,7 +12,6 @@ namespace tp1.clases_TP4
         public DecoradorNotasEnLetras(IDecorador elementoDecorado) : base(elementoDecorado)
         {
         }
-
         public override string mostrarUltimaCalificacion()
         {
             

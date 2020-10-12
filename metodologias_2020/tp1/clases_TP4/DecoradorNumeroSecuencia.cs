@@ -15,10 +15,6 @@ namespace tp1.clases_TP4
 
         public override string mostrarUltimaCalificacion()
         {
-            //int idx = elementoDecorado.mostrarUltimaCalificacion().IndexOf(this.getNombre());
-            //string cali = elementoDecorado.mostrarUltimaCalificacion().Insert(idx, orden.ToString() + ") ");
-            //orden++;
-            //return cali;
             return String.Format("{0}) {1}", orden, elementoDecorado.mostrarUltimaCalificacion());
         }
     }

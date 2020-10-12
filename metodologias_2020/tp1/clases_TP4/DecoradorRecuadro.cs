@@ -9,7 +9,6 @@ namespace tp1.clases_TP4
         public DecoradorRecuadro(IDecorador elementoDecorado) : base(elementoDecorado)
         {
         }
-
         public override string mostrarUltimaCalificacion()
         {
             string asteriscos = new string('*', (this.elementoDecorado.mostrarUltimaCalificacion()).Length + 10);
