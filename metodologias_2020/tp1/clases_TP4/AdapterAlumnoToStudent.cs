@@ -44,7 +44,12 @@ namespace tp1.clases_TP4
 
         public string showResult()
         {
-            return this.alumno.mostrarCalificacion();
+            IDecorador decoracion = new DecoradorLegajo(alumno);
+            decoracion = new DecoradorNotasEnLetras(decoracion);
+            decoracion = new DecoradorAprobacion(decoracion);
+            decoracion = new DecoradorNumeroSecuencia(decoracion);
+            decoracion = new DecoradorRecuadro(decoracion);
+            return decoracion.mostrarUltimaCalificacion();
             //return this.alumno.getCalificacion().ToString();
         }
 

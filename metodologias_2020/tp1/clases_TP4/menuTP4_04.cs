@@ -12,6 +12,8 @@ namespace tp1
     {
         public static void run()
         {
+            pruebaDecorados();
+
             Teacher profesor = new Teacher();
             Collection students = new ListOfStudent();
             Alumno alumno;
@@ -32,5 +34,60 @@ namespace tp1
 
         }
 
+        private static void pruebaDecorados()
+        {
+            Alumno alumno;
+
+            Console.WriteLine("\t Prueba de decoraciones sumadas una a una\n");
+            alumno = (Alumno)FabricaDeComparables.crearAleatorio("2");
+            alumno.setCalificacion(7);
+            DecoradorAlumno alumnoDecorado = new DecoradorLegajo(alumno);
+            Console.WriteLine(alumnoDecorado.mostrarUltimaCalificacion());
+
+            alumnoDecorado = new DecoradorNotasEnLetras(alumnoDecorado);
+            Console.WriteLine(alumnoDecorado.mostrarUltimaCalificacion());
+
+            alumnoDecorado = new DecoradorAprobacion(alumnoDecorado);
+            Console.WriteLine(alumnoDecorado.mostrarUltimaCalificacion());
+
+            alumnoDecorado = new DecoradorNumeroSecuencia(alumnoDecorado);
+            Console.WriteLine(alumnoDecorado.mostrarUltimaCalificacion());
+
+            alumnoDecorado = new DecoradorRecuadro(alumnoDecorado);
+            Console.WriteLine(alumnoDecorado.mostrarUltimaCalificacion());
+
+            //#################################################################
+            Console.WriteLine("\t Prueba de decoraciones de a una\n");
+            //#################################################################
+
+            alumno = (Alumno)FabricaDeComparables.crearAleatorio("2");
+            DecoradorAlumno alumnoDecorado1 = new DecoradorLegajo(alumno);
+            Console.WriteLine(alumnoDecorado1.mostrarUltimaCalificacion());
+
+            alumno = (Alumno)FabricaDeComparables.crearAleatorio("2");
+            alumno.setCalificacion(5);
+            DecoradorAlumno alumnoDecorado2 = new DecoradorNotasEnLetras(alumno);
+            Console.WriteLine(alumnoDecorado2.mostrarUltimaCalificacion());
+
+            alumno = (Alumno)FabricaDeComparables.crearAleatorio("2");
+            alumno.setCalificacion(7);
+            DecoradorAlumno alumnoDecorado3 = new DecoradorAprobacion(alumno);
+            Console.WriteLine(alumnoDecorado3.mostrarUltimaCalificacion());
+
+            alumno = (Alumno)FabricaDeComparables.crearAleatorio("2");
+            alumno.setCalificacion(1);
+            DecoradorAlumno alumnoDecorado4 = new DecoradorRecuadro(alumno);
+            Console.WriteLine(alumnoDecorado4.mostrarUltimaCalificacion());
+
+            alumno = (Alumno)FabricaDeComparables.crearAleatorio("2");
+            alumno.setCalificacion(6);
+            DecoradorAlumno alumnoDecorado5 = new DecoradorNumeroSecuencia(alumno);
+            Console.WriteLine(alumnoDecorado5.mostrarUltimaCalificacion());
+
+            DecoradorNumeroSecuencia.orden = 0;
+            Console.WriteLine("\n \t Pulse tecla para continuar \n");
+            Console.ReadLine();
+            Console.Clear();
+        }
     }
 }

@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 using tp1.clases_TP3;
+using tp1.clases_TP4;
 using tp1.Strategy;
 
 namespace tp1
 {
-    class Alumno : Persona
+    class Alumno : Persona, IDecorador
     {
         protected int legajo;
         protected double promedio;
@@ -45,9 +46,9 @@ namespace tp1
         {
             return new Random().Next(1, 3);
         }
-        public virtual string mostrarCalificacion()
+        public virtual string mostrarUltimaCalificacion()
         {
-            return this.getNombre() + "\t\t" + getCalificacion().ToString();
+            return this.getNombre() + "    " + getCalificacion().ToString();
         }
 
 
