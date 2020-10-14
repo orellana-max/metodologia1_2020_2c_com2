@@ -5,7 +5,7 @@ using tp1.Iterator;
 
 namespace tp1
 {
-    class Pila : Coleccionable
+    class Pila : Coleccionable, Ordenable
     {
         List<Comparable> elementos = new List<Comparable>();
 
@@ -86,6 +86,21 @@ namespace tp1
         public Comparable Tope()
         {
             return this.elementos[elementos.Count - 1];
+        }
+
+        public void setOrdenInicio(OrdenEnAula1 ordenEnAula1)
+        {
+            ordenEnAula1.ejecutar();
+        }
+
+        public void setOrdenLlegaAlumno(OrdenEnAula2 ordenEnAula2)
+        {
+            //ordenEnAula2.ejecutar();
+        }
+
+        public void setOrdenLlena(OrdenEnAula1 ordenEnAula1)
+        {
+            ordenEnAula1.ejecutar();
         }
     }
 }

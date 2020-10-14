@@ -7,46 +7,51 @@ using tp1.Strategy;
 
 namespace tp1
 {
-    class Alumno : Persona, IDecorador
+    class Alumno : IAlumno
     {
         protected int legajo;
         protected double promedio;
         protected int calificacion;
         protected StrategyCompararAlumnos _StrategyCompararAlumnos;
+        // adicional para decoracion
+        //protected DecoradorAlumno decorador;
 
-        public Alumno(string nombre, int dni, int legajo, double promedio) : base(nombre, dni)
+        public Alumno(string nombre, int dni, int legajo, double promedio)
         {
+            this.nombre = nombre;
+            this.dni = dni;
             this.legajo = legajo;
             this.promedio = promedio;
             _StrategyCompararAlumnos = new StrategyComparacionNombre();
+            Console.WriteLine("Se creo un Alumno concreto");
         }
 
-        public virtual int getLegajo()
+        public override int getLegajo()
         {
             return this.legajo;
         }
-        public virtual double getPromedio()
+        public override double getPromedio()
         {
             return this.promedio;
         }
-        public virtual int getCalificacion()
+        public override int getCalificacion()
         {
             return this.calificacion;
         }
-        public virtual void setCalificacion(int calificacion)
+        public override void setCalificacion(int calificacion)
         {
             this.calificacion = calificacion;
         }
-        public virtual void setComparacion(StrategyCompararAlumnos comparacion)
+        public override void setComparacion(StrategyCompararAlumnos comparacion)
         {
             this._StrategyCompararAlumnos = comparacion;
         }
 
-        public virtual int responderPregunta(int pregunta)
+        public override int responderPregunta(int pregunta)
         {
             return new Random().Next(1, 3);
         }
-        public virtual string mostrarUltimaCalificacion()
+        public override string mostrarUltimaCalificacion()
         {
             return this.getNombre() + "    " + getCalificacion().ToString();
         }

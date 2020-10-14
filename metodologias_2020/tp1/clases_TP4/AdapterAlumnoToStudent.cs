@@ -7,9 +7,9 @@ namespace tp1.clases_TP4
 {
     class AdapterAlumnoToStudent : Student
     {
-        Alumno alumno;
+        IAlumno alumno;
 
-        public AdapterAlumnoToStudent(Alumno alumno)
+        public AdapterAlumnoToStudent(IAlumno alumno)
         {
             this.alumno = alumno;
         }

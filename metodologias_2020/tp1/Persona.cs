@@ -4,7 +4,7 @@ using System.Text;
 
 namespace tp1
 {
-    class Persona : Comparable
+    public class Persona : Comparable
     {
         public virtual string nombre { get; set; }
         public virtual int dni { get; set; }
