@@ -8,6 +8,9 @@ namespace tp1
     class Pila : Coleccionable, Ordenable
     {
         List<Comparable> elementos = new List<Comparable>();
+        OrdenEnAula1 _ordenInicio;
+        OrdenEnAula2 _ordenLlegaAlumno;
+        OrdenEnAula1 _ordenAulaLlena;
 
         public Iterador crearIterador()
         {
@@ -23,7 +26,16 @@ namespace tp1
         }
         public void agregar(Comparable comparable)
         {
+            if (this.elementos.Count == 0)
+            {
+                this._ordenInicio.ejecutar();
+            }
+            this._ordenLlegaAlumno.ejecutar(comparable);
             this.elementos.Add(comparable);
+            if (this.elementos.Count == 40)
+            {
+                this._ordenAulaLlena.ejecutar();
+            }
         }
         public bool contiene(Comparable comparable)
         {
@@ -62,7 +74,7 @@ namespace tp1
             {
                 min = elementos[0];
             }
-         
+
             foreach (Comparable ele in elementos)
             {
                 if (min.sosMayor(ele))
@@ -88,19 +100,19 @@ namespace tp1
             return this.elementos[elementos.Count - 1];
         }
 
-        public void setOrdenInicio(OrdenEnAula1 ordenEnAula1)
+        public void setOrdenInicio(OrdenEnAula1 ordenInicio)
         {
-            ordenEnAula1.ejecutar();
+            this._ordenInicio = ordenInicio;
         }
 
-        public void setOrdenLlegaAlumno(OrdenEnAula2 ordenEnAula2)
+        public void setOrdenLlegaAlumno(OrdenEnAula2 ordenLlegaAlumno)
         {
-            //ordenEnAula2.ejecutar();
+            this._ordenLlegaAlumno = ordenLlegaAlumno;
         }
 
-        public void setOrdenLlena(OrdenEnAula1 ordenEnAula1)
+        public void setOrdenAulaLlena(OrdenEnAula1 ordenAulaLlena)
         {
-            ordenEnAula1.ejecutar();
+            this._ordenAulaLlena = ordenAulaLlena;
         }
     }
 }

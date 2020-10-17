@@ -11,6 +11,8 @@ namespace tp1
         static void Main(string[] args)
         {
             menuTP5_02.run();
+            menuTP5_10.run();
+
             string op;
             do {
                 Console.WriteLine("Elija opcion: \n" +

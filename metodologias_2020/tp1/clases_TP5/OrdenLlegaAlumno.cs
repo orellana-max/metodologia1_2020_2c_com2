@@ -12,7 +12,10 @@ namespace tp1.clases_TP5
         {
             this.aula = aula;
         }
-
+        /// <summary>
+        /// ejecuta el mensaje nuevoAlumno(comparable) para el Aula
+        /// </summary>
+        /// <param name="comparable"> Alumno para agregar a Aula </param>
         public void ejecutar(Comparable comparable)
         {
             this.aula.nuevoAlumno((Alumno)comparable);

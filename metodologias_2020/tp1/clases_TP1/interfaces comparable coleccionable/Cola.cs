@@ -5,9 +5,13 @@ using tp1.Iterator;
 
 namespace tp1
 {
-	class Cola : Coleccionable
+	class Cola : Coleccionable, Ordenable
 	{
         List<Comparable> elementos = new List<Comparable>();
+        OrdenEnAula1 _ordenInicio;
+        OrdenEnAula2 _ordenLlegaAlumno;
+        OrdenEnAula1 _ordenAulaLlena;
+
         public void listar()
 		{
 			foreach (var elem in elementos)
@@ -19,10 +23,19 @@ namespace tp1
 
         #region Coleccionable
         public void agregar(Comparable comparable)
-		{
-			this.elementos.Add(comparable);
-		}
-        public bool contiene(Comparable comparable)
+        {
+            if (this.elementos.Count == 0)
+            {
+                this._ordenInicio.ejecutar();
+            }
+            this._ordenLlegaAlumno.ejecutar(comparable);
+            this.elementos.Add(comparable);
+            if (this.elementos.Count == 40)
+            {
+                this._ordenAulaLlena.ejecutar();
+            }
+        }
+            public bool contiene(Comparable comparable)
         {
             foreach (Comparable ele in elementos)
             {
@@ -88,6 +101,21 @@ namespace tp1
         public Iterador crearIterador()
         {
             return new IteradorDePila(this.elementos);
+        }
+
+        public void setOrdenInicio(OrdenEnAula1 ordenInicio)
+        {
+            this._ordenInicio = ordenInicio;
+        }
+
+        public void setOrdenLlegaAlumno(OrdenEnAula2 ordenLlegaAlumno)
+        {
+            this._ordenLlegaAlumno = ordenLlegaAlumno;
+        }
+
+        public void setOrdenAulaLlena(OrdenEnAula1 ordenAulaLlena)
+        {
+            this._ordenAulaLlena = ordenAulaLlena;
         }
     }
 }

@@ -5,15 +5,17 @@ using tp1.Iterator;
 
 namespace tp1.clases_TP2
 {
-    class Conjunto : Coleccionable
+    class Conjunto : Coleccionable, Ordenable
     {
         List<Comparable> elementos = new List<Comparable>();
+        OrdenEnAula1 _ordenInicio;
+        OrdenEnAula2 _ordenLlegaAlumno;
+        OrdenEnAula1 _ordenAulaLlena;
 
         public bool pertenece(Comparable elemento)
         {
             return this.contiene(elemento);
         }
-
 
         public int cuantos()
         {
@@ -55,7 +57,17 @@ namespace tp1.clases_TP2
         {
             if (!this.contiene(elemento))
             {
-                elementos.Add(elemento);
+                if (this.elementos.Count == 0)
+                {
+                    this._ordenInicio.ejecutar();
+                }
+                this._ordenLlegaAlumno.ejecutar(elemento);
+                this.elementos.Add(elemento);
+                if (this.elementos.Count == 40)
+                {
+                    this._ordenAulaLlena.ejecutar();
+                }
+
             }
         }
         public bool contiene(Comparable comparable)
@@ -73,6 +85,20 @@ namespace tp1.clases_TP2
         public Iterador crearIterador()
         {
             return new IteradorDeConjunto(this.elementos);
+        }
+        public void setOrdenInicio(OrdenEnAula1 ordenInicio)
+        {
+            this._ordenInicio = ordenInicio;
+        }
+
+        public void setOrdenLlegaAlumno(OrdenEnAula2 ordenLlegaAlumno)
+        {
+            this._ordenLlegaAlumno = ordenLlegaAlumno;
+        }
+
+        public void setOrdenAulaLlena(OrdenEnAula1 ordenAulaLlena)
+        {
+            this._ordenAulaLlena = ordenAulaLlena;
         }
     }
 }

@@ -10,6 +10,9 @@ namespace tp1.clases_TP2
     class Diccionario : Coleccionable
     {
         List<ClaveValor> elementos = new List<ClaveValor>();
+        OrdenEnAula1 _ordenInicio;
+        OrdenEnAula2 _ordenLlegaAlumno;
+        OrdenEnAula1 _ordenAulaLlena;
 
         public void agregar(Comparable clave, Comparable valor)
         {
@@ -21,8 +24,20 @@ namespace tp1.clases_TP2
                     return;
                 }
             }
+            if (this.elementos.Count == 0)
+            {
+                this._ordenInicio.ejecutar();
+            }
+
+            this._ordenLlegaAlumno.ejecutar(valor);
+            
             ClaveValor claveValor = new ClaveValor(clave, valor);
-            elementos.Add(claveValor);
+
+            this.elementos.Add(claveValor);
+            if (this.elementos.Count == 40)
+            {
+                this._ordenAulaLlena.ejecutar();
+            }
         }
         public Comparable valorDe(Comparable clave)
         {
@@ -110,6 +125,20 @@ namespace tp1.clases_TP2
         public Iterador crearIterador()
         {
             return new IteradorDeDiccionario(this.elementos);
+        }
+        public void setOrdenInicio(OrdenEnAula1 ordenInicio)
+        {
+            this._ordenInicio = ordenInicio;
+        }
+
+        public void setOrdenLlegaAlumno(OrdenEnAula2 ordenLlegaAlumno)
+        {
+            this._ordenLlegaAlumno = ordenLlegaAlumno;
+        }
+
+        public void setOrdenAulaLlena(OrdenEnAula1 ordenAulaLlena)
+        {
+            this._ordenAulaLlena = ordenAulaLlena;
         }
     }
 }

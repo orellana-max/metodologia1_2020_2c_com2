@@ -12,7 +12,9 @@ namespace tp1
         {
             this.aula = aula;
         }
-
+        /// <summary>
+        /// ejecuta el metodo comenzar del aula.
+        /// </summary>
         public void ejecutar()
         {
             this.aula.comenzar();

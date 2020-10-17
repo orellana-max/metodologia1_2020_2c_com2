@@ -20,6 +20,7 @@ namespace tp1
         }
         public void claseLista()
         {
+            Console.WriteLine("Clase lista.");
             this.teacher.teachingAClass();
         }
 

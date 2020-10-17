@@ -18,10 +18,10 @@ namespace tp1
             AdapterAlumnoToStudent estudiante;
             for (int i = 0; i < 10; i++) //agrega 10 alumnos y 10 alumnos muy estudiosos
             {
-                alumno = (IAlumno)FabricaDeComparables.crearAleatorio("2");
+                alumno = (IAlumno)FabricaDeComparables.crearAleatorio("2.2");
                 estudiante = new AdapterAlumnoToStudent(alumno);
                 students.addStudent(estudiante);
-                alumno = (IAlumno)FabricaDeComparables.crearAleatorio("2.1");
+                alumno = (IAlumno)FabricaDeComparables.crearAleatorio("2.3");
                 alumno.setComparacion(new StrategyComparacionCalificacion());
                 estudiante = new AdapterAlumnoToStudent(alumno);
                 students.addStudent(estudiante);
