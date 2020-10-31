@@ -10,13 +10,14 @@ namespace tp1.clases_TP3
         public abstract Comparable CrearPorTeclado();
 
         /// <summary>
-        /// opcion 1 devuelve un Número.
-        /// opcion 2 devuelve un Alumno.
-        /// opcion 2.1 devuelve un AlumnoMuyEstudioso.
-        /// opcion 2.2 devuelve un AlumnoProxy.
-        /// opcion 2.3 devuelve un AlumnoMuyEstudiosoProxy.
-        /// opcion 3 devuelve un Vendedor.
-        /// opcion 4 devuelve un VendedorPauperrimo.
+        /// opcion 1 Devuelve un Número.
+        /// opcion 2 Devuelve un Alumno.
+        /// opcion 2.1 Devuelve un AlumnoMuyEstudioso.
+        /// opcion 2.2 Devuelve un AlumnoProxy.
+        /// opcion 2.3 Devuelve un AlumnoMuyEstudiosoProxy.
+        /// opcion 2.4 Devuelve un AlumnoCompuesto.
+        /// opcion 3 Devuelve un Vendedor.
+        /// opcion 4 Devuelve un VendedorPauperrimo.
         /// </summary>
         /// <param name="opcion"></param>
         /// <returns></returns>
@@ -34,6 +35,8 @@ namespace tp1.clases_TP3
                 fabrica = new FabricaDeAlumnosProxy();
             if (opcion == "2.3")
                 fabrica = new FabricaDeAlumnosMuyEstudiosoProxy();
+            if (opcion == "2.4")
+                fabrica = new FabricaDeAlumnosCompuestos();
             if (opcion == "3")
                 fabrica = new FabricaDeVendedores();
             if (opcion == "4")
@@ -56,6 +59,8 @@ namespace tp1.clases_TP3
                 fabrica = new FabricaDeAlumnosProxy();
             if (opcion == "2.3")
                 fabrica = new FabricaDeAlumnosMuyEstudiosoProxy();
+            if (opcion == "2.4")
+                fabrica = new FabricaDeAlumnosCompuestos();
             if (opcion == "3")
                 fabrica = new FabricaDeVendedores();
             if (opcion == "4")

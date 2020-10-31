@@ -10,8 +10,7 @@ namespace tp1
     {
         static void Main(string[] args)
         {
-            menuTP5_02.run();
-            menuTP5_10.run();
+            menuTP6_02.run();
 
             string op;
             do {
@@ -31,7 +30,7 @@ namespace tp1
                     "12 - TP5 - Ejercicio 10 \n" +
                     "Enter para salir"
                     );
-                op = Console.ReadLine();
+                op = "";//Console.ReadLine();
                 switch (op)
                 {
                     case "1":

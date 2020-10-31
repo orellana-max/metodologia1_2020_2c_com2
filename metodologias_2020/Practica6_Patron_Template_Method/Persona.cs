@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace tp1
+namespace Practica6_Patron_Template_Method
 {
     public class Persona : Comparable
     {
@@ -54,7 +54,7 @@ namespace tp1
 
         public override string ToString()
         {
-            return String.Format(this.nombre + " DNI: " + this.getDNI().ToString());
+            return String.Format(this.nombre);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace tp1.clases_TP4
         public override string mostrarUltimaCalificacion()
         {
             int idx = elementoDecorado.mostrarUltimaCalificacion().IndexOf(this.getNombre()) + this.getNombre().Length;
-            return elementoDecorado.mostrarUltimaCalificacion().Insert(idx, " (" + this.getLegajo().ToString() +")");
+            return elementoDecorado.mostrarUltimaCalificacion().Insert(idx, " (L" + this.getLegajo().ToString() +")");
         }
     }
 }
