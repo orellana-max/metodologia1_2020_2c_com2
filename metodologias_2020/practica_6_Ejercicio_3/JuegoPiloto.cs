@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Practica6_Patron_Template_Method
+namespace practica_6_Ejercicio_3
 {
     class JuegoPiloto : Juego
     {
         Persona p1, p2;
         List<int> _mazo;
+        int idx = 0;
         int CartaJugada;
 
         public JuegoPiloto(Persona p1, Persona p2)
@@ -16,7 +17,7 @@ namespace Practica6_Patron_Template_Method
             this.p2 = p2;
 
             this._mazo = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-            CartaJugada = 0;
+
             _turno = null;
         }
 
@@ -24,6 +25,7 @@ namespace Practica6_Patron_Template_Method
         {
             if (CartaJugada == 1)
             {
+                Console.WriteLine("Hay ganador.");
                 return true;
             }
             else { return false; }
@@ -31,6 +33,7 @@ namespace Practica6_Patron_Template_Method
 
         public override void jugarMano()
         {
+            CartaJugada = _mazo[idx];
 
             Console.WriteLine("Juega Mano.");
             if (this._turno == p1)
@@ -40,7 +43,8 @@ namespace Practica6_Patron_Template_Method
 
             tomarCartas(_turno);
             descartar(_turno);
-            CartaJugada++;
+            Console.WriteLine("Se descarto la carta: {0}", CartaJugada);
+            idx++;
         }
 
         public override void mezclarMazo()
@@ -59,12 +63,16 @@ namespace Practica6_Patron_Template_Method
 
         public override void repartir()
         {
-            //for (int i = 0; i < _mazo.Count; i++)
-            //{
-            //    this.cartasP1.Add(_mazo[i++]);
-            //    this.cartasP2.Add(_mazo[i]);
-            //}
             Console.WriteLine("Se repartieron las cartas");
+        }
+
+        public override void tomarCartas(Persona j)
+        {
+            Console.WriteLine("El jugador {0} tomo una carta.", p1 == j ? "1" : "2");
+        }
+        public override void descartar(Persona j)
+        {
+            Console.WriteLine("El jugador {0} descarto una carta.", p1 == j ? "1" : "2");
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Practica6_Patron_Template_Method
+namespace tp1
 {
     public interface Comparable
     {

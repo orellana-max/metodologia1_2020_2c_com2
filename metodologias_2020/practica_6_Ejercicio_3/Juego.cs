@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Practica6_Patron_Template_Method
+namespace practica_6_Ejercicio_3
 {
     abstract class Juego
     {
         protected Persona _turno;
         public Persona jugar()
-        {  
+        {
             mezclarMazo();
             repartir();
             while (!hayGanador())
             {
-               jugarMano();
+                jugarMano();
             }
             return _turno;
 
@@ -23,12 +23,8 @@ namespace Practica6_Patron_Template_Method
         public abstract void jugarMano();
         public abstract bool hayGanador();
 
-        public void tomarCartas(Persona j) {
-            Console.WriteLine("el jugador {0} tomo una carta", j);
-        }
-        public void descartar(Persona j)
-        {
-            Console.WriteLine("el jugador {0} descarto una carta", j);
-        }
+        public abstract void tomarCartas(Persona j);
+        public abstract void descartar(Persona j);
+        
     }
 }
