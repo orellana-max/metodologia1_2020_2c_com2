@@ -6,16 +6,12 @@ namespace practica_6_Ejercicio_3
 {
     class JuegoPiloto : Juego
     {
-        Persona p1, p2;
         List<int> _mazo;
         int idx = 0;
         int CartaJugada;
 
-        public JuegoPiloto(Persona p1, Persona p2)
+        public JuegoPiloto()
         {
-            this.p1 = p1;
-            this.p2 = p2;
-
             this._mazo = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
 
             _turno = null;
@@ -36,13 +32,13 @@ namespace practica_6_Ejercicio_3
             CartaJugada = _mazo[idx];
 
             Console.WriteLine("Juega Mano.");
-            if (this._turno == p1)
-                this._turno = p2;
+            if (this._turno == jugadores[0])
+                this._turno = jugadores[1];
             else
-                this._turno = p1;
+                this._turno = jugadores[0];
 
-            tomarCartas(_turno);
-            descartar(_turno);
+            tomarCartas();
+            descartar();
             Console.WriteLine("Se descarto la carta: {0}", CartaJugada);
             idx++;
         }
@@ -66,13 +62,17 @@ namespace practica_6_Ejercicio_3
             Console.WriteLine("Se repartieron las cartas");
         }
 
-        public override void tomarCartas(Persona j)
+        public override void tomarCartas()
         {
-            Console.WriteLine("El jugador {0} tomo una carta.", p1 == j ? "1" : "2");
+            Console.WriteLine("El jugador {0} tomo una carta.", _turno == jugadores[0] ? "1" : "2");
         }
-        public override void descartar(Persona j)
+        public override void descartar()
         {
-            Console.WriteLine("El jugador {0} descarto una carta.", p1 == j ? "1" : "2");
+            Console.WriteLine("El jugador {0} descarto una carta.", _turno == jugadores[0]  ? "1" : "2");
+        }
+        public override void mostrarGanador()
+        {
+            Console.WriteLine("Gano el jugador {0}", _turno == jugadores[0]  ? "1" : "2");
         }
     }
 }
