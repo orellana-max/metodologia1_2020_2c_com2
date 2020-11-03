@@ -111,7 +111,7 @@ namespace practica_6_Ejercicio_3
             }
             else
             {
-                Console.WriteLine("Gano el jugador {0}", (puntos1 > puntos2) ? "1" : "2");
+                Console.WriteLine("Gano el jugador {0}", (puntos1 > puntos2) ? this.jugadores[0] : this.jugadores[1]);
             }
         }
     }
