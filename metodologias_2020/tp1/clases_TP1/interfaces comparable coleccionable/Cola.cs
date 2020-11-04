@@ -24,15 +24,22 @@ namespace tp1
         #region Coleccionable
         public void agregar(Comparable comparable)
         {
-            if (this.elementos.Count == 0)
+            if (this._ordenInicio != null) // si esta vacio el metodo es usado solo para agregar un comparable a la lista
             {
-                this._ordenInicio.ejecutar();
+                if (this.elementos.Count == 0)
+                {
+                    this._ordenInicio.ejecutar();
+                }
+                this._ordenLlegaAlumno.ejecutar(comparable);
+                this.elementos.Add(comparable);
+                if (this.elementos.Count == 40)
+                {
+                    this._ordenAulaLlena.ejecutar();
+                }
             }
-            this._ordenLlegaAlumno.ejecutar(comparable);
-            this.elementos.Add(comparable);
-            if (this.elementos.Count == 40)
+            else
             {
-                this._ordenAulaLlena.ejecutar();
+                this.elementos.Add(comparable);
             }
         }
             public bool contiene(Comparable comparable)

@@ -55,20 +55,28 @@ namespace tp1.clases_TP2
         }
         public void agregar(Comparable elemento)
         {
+
             if (!this.contiene(elemento))
             {
-                if (this.elementos.Count == 0)
+                if (this._ordenInicio != null)// si esta vacio el metodo es usado solo para agregar un comparable a la lista
                 {
-                    this._ordenInicio.ejecutar();
+                    if (this.elementos.Count == 0)
+                    {
+                        this._ordenInicio.ejecutar();
+                    }
+                    this._ordenLlegaAlumno.ejecutar(elemento);
+                    this.elementos.Add(elemento);
+                    if (this.elementos.Count == 40)
+                    {
+                        this._ordenAulaLlena.ejecutar();
+                    }
                 }
-                this._ordenLlegaAlumno.ejecutar(elemento);
-                this.elementos.Add(elemento);
-                if (this.elementos.Count == 40)
+                else
                 {
-                    this._ordenAulaLlena.ejecutar();
+                    this.elementos.Add(elemento);
                 }
-
             }
+
         }
         public bool contiene(Comparable comparable)
         {

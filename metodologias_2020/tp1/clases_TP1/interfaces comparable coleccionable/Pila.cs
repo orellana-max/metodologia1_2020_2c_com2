@@ -26,15 +26,21 @@ namespace tp1
         }
         public void agregar(Comparable comparable)
         {
-            if (this.elementos.Count == 0)
+            if (this._ordenInicio != null)// si esta vacio el metodo es usado solo para agregar un comparable a la lista
             {
-                this._ordenInicio.ejecutar();
-            }
-            this._ordenLlegaAlumno.ejecutar(comparable);
-            this.elementos.Add(comparable);
-            if (this.elementos.Count == 40)
+                if (this.elementos.Count == 0)
+                {
+                    this._ordenInicio.ejecutar();
+                }
+                this._ordenLlegaAlumno.ejecutar(comparable);
+                this.elementos.Add(comparable);
+                if (this.elementos.Count == 40)
+                {
+                    this._ordenAulaLlena.ejecutar();
+                }
+            }else
             {
-                this._ordenAulaLlena.ejecutar();
+                this.elementos.Add(comparable);
             }
         }
         public bool contiene(Comparable comparable)
@@ -90,14 +96,6 @@ namespace tp1
             Comparable dato = this.elementos[elementos.Count - 1];
             this.elementos.RemoveAt(elementos.Count - 1);
             return dato;
-        }
-        public bool esVacia()
-        {
-            return this.elementos.Count == 0;
-        }
-        public Comparable Tope()
-        {
-            return this.elementos[elementos.Count - 1];
         }
 
         public void setOrdenInicio(OrdenEnAula1 ordenInicio)

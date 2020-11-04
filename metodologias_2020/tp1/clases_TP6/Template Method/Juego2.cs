@@ -33,19 +33,6 @@ namespace practica_6_Ejercicio_3
             }
             else { return false; }
         }
-
-        public override void jugarMano()
-        {
-            Console.WriteLine("Juega Mano.");
-            if (this._turno == jugadores[0])
-                this._turno = jugadores[1];
-            else
-                this._turno = jugadores[0];
-
-            tomarCartas();
-            descartar();
-            Console.WriteLine("Se descartó la carta: {0}", CartaJugada);
-        }
         public override void mezclarMazo()
         {
             Random r = new Random();
@@ -61,6 +48,7 @@ namespace practica_6_Ejercicio_3
         }
         public override void repartir()
         {
+            idx = 0;
             _cartasJ1 = new List<int>();
             _cartasJ2 = new List<int>();
             for (int i = 0; i < 3; i++)
@@ -108,9 +96,18 @@ namespace practica_6_Ejercicio_3
             if (puntos1 == puntos2)
             {
                 Console.WriteLine("Hay empate");
+                _turno = null;
             }
             else
             {
+                if (puntos1 > puntos2)
+                {
+                    _turno = jugadores[0];
+                }
+                else
+                {
+                    _turno = jugadores[1];
+                }
                 Console.WriteLine("Gano el jugador {0}", (puntos1 > puntos2) ? this.jugadores[0] : this.jugadores[1]);
             }
         }

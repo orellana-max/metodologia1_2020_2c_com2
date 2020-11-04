@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using tp1.ejerciciosTP1;
 using tp1.clases_TP2;
 using tp1.clases_TP3;
+using practica_6_Ejercicio_3;
 
 namespace tp1
 {
@@ -10,7 +11,18 @@ namespace tp1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("\n\n \t Ejercicio 2 práctica 6 Composite\n\t  toque una tecla para continuar.");
+            Console.ReadKey();
             menuTP6_02.run();
+            Console.WriteLine("\n\n\n \t toque una tecla para continuar.");
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("\n\n\n \t Ejercicio 5 practica 6 Template Method\n\n\t");
+            menuTP6_05.run();
+            Console.WriteLine("\n\n\n \t toque una tecla para continuar.");
+            Console.ReadKey();
+            Console.Clear();
+            
 
             string op;
             do {
@@ -28,9 +40,11 @@ namespace tp1
                     "10 - TP4 - Ejercicio 04 \n\n" +
                     "11 - TP5 - Ejercicio 02 \n" +
                     "12 - TP5 - Ejercicio 10 \n" +
+                    "13 - TP6 - Ejercicio 2 \n" +
+                    "14 - TP6 - Ejercicio 5 \n" +
                     "Enter para salir"
                     );
-                op = "";//Console.ReadLine();
+                op = Console.ReadLine();
                 switch (op)
                 {
                     case "1":
@@ -71,6 +85,12 @@ namespace tp1
                         break;
                     case "12":
                         menuTP5_10.run();
+                        break;
+                    case "13":
+                        menuTP6_02.run();
+                        break;
+                    case "14":
+                        menuTP6_05.run();
                         break;
                     case "":
                         Console.WriteLine("Esta saliendo.");
